@@ -1,0 +1,105 @@
+# Archivos de Visual Studio
+.vs/
+VSWorkspaceState.json
+*.vsp
+
+# Archivos de compilación de .NET
+[Bb]in/
+[Oo]bj/
+[Pp]ublish/
+*.user
+*.suo
+*.cache
+*.vshost.*
+
+# Archivos de NuGet
+**/packages/
+*.nupkg
+nuget.exe
+
+# Archivos de logs y temporales
+*.log
+*.log.*
+logs/
+*.tmp
+*.temp
+
+# Archivos de configuración local
+appsettings.*.json
+!appsettings.json
+appsettings.Local.json
+secrets.json
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Archivos de base de datos local
+*.mdf
+*.ldf
+*.sdf
+*.db
+*.sqlite
+
+# Migraciones de Entity Framework
+Migrations/*.Designer.cs
+Migrations/*.resx# Archivos de Visual Studio
+.vs/
+VSWorkspaceState.json
+*.vsp
+
+# Archivos de compilación de .NET
+[Bb]in/
+[Oo]bj/
+[Pp]ublish/
+*.user
+*.suo
+*.cache
+*.vshost.*
+
+# Archivos de NuGet
+**/packages/
+*.nupkg
+nuget.exe
+
+# Archivos de logs y temporales
+*.log
+*.log.*
+logs/
+*.tmp
+*.temp
+
+# Archivos de configuración local
+appsettings.*.json
+!appsettings.json
+appsettings.Local.json
+secrets.json
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Archivos de base de datos local
+*.mdf
+*.ldf
+*.sdf
+*.db
+*.sqlite
+
+# Migraciones de Entity Framework
+Migrations/*.Designer.cs
+Migrations/*.resx
