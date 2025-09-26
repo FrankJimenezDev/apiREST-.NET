@@ -1,5 +1,6 @@
 ﻿using Common.Entities;
 using Common.helpers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -17,6 +18,7 @@ namespace Controller
             _userService = userService;
         }
         [HttpGet]
+        [Authorize]
         [SwaggerOperation(
             Summary = "Obtener todos los usuarios",
             Description = "Retorna una lista completa de todos los usuarios existentes en el sistema.")]
@@ -37,6 +39,7 @@ namespace Controller
         }
 
         [HttpGet("{userId}")]
+        [Authorize]
         [SwaggerOperation(
             Summary = "Obtener usuario especifico",
             Description = "Retorna un usuario del sistema a travez se su id si este existe.")]

@@ -15,6 +15,7 @@ namespace CuentaClientes.Configurations
         public static void ConfigureServices(WebApplicationBuilder builder)
         {
             var jwtSettings = builder.Configuration.GetSection("JwtSettings");
+            builder.Configuration.AddJsonFile("appsettings.Development.json", optional: false, reloadOnChange: true);
 
             // 1. Configurar Entity Framework con MySQL
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -55,7 +56,7 @@ namespace CuentaClientes.Configurations
                     Scheme = "bearer",
                     BearerFormat = "JWT",
                     In = Microsoft.OpenApi.Models.ParameterLocation.Header,
-                    Description = "Introduce el token JWT con el prefijo Bearer. Ejemplo: \"Bearer {tu token}\""
+                    Description = "Introduce el token JWT"
                 });
 
                 options.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
