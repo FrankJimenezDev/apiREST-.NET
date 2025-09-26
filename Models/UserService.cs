@@ -40,9 +40,23 @@ namespace Models
             }
         }
 
-        public async Task<User> GetUserByIdAsync(int id)
+        public async Task<User> GetUserByIdAsync(int userId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                
+                var user = await _context.Users.FirstOrDefaultAsync(a => a.Id == userId);  // ✅ Filtro por
+                if (user == null)
+                    throw new Exception($"User with ID {userId} not found");
+
+                return user;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (you can use a logging framework here)
+                Console.WriteLine($"An error occurred while retrieving user: {ex.Message}");
+                throw; // Re-throw the exception after logging it
+            }
         }
 
         public async Task UpdateUserAsync(IUser user)

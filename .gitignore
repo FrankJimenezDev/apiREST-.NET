@@ -79,6 +79,7 @@ logs/
 # Archivos de configuración local
 appsettings.*.json
 !appsettings.json
+!appsettings.example.json
 appsettings.Local.json
 secrets.json
 
